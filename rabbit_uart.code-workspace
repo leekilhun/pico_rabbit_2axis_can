@@ -1,0 +1,20 @@
+{
+	"folders": [
+    {
+      "path": "rabbit_uart"
+    }
+  ],
+  "settings": {
+    "terminal.integrated.env.windows": {
+      "PATH": "${env:PATH};c:/tools/xpack-windows-build-tools-4.2.1-2/bin;c:/tools/mingw32/bin",
+      "PICO_SDK_PATH": "D:/_develop/pico/pico-sdk",
+      "PICOSYSTEM_DIR": "D:/_develop/pico/picosystem"
+    },
+    "files.associations": {
+      "def.h": "c",
+      "stdint.h": "c",
+      "vcruntime.h": "c",
+      "gpio.h": "c"
+    }
+  }
+}
