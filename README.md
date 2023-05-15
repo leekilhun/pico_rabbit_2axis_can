@@ -7,15 +7,20 @@ sudo python3 -m pip install pyserial
 ## CMake 설정 for Windows 
 cmake -S . -B build -G "MinGW Makefiles" -DPICO_BOARD=rp2040_rabbit_2axis_can
 
-## CMake 설정 for macOS 
-cmake -S . -B build -DPICO_BOARD=rp2040_rabbit_2axis_can -DPICO_SDK_PATH="D:/_develop/pico/pico-sdk"
-
 ## CMake 빌드
-cmake --build build -j16
+cmake --build build -j14
 
 ## 다운로드
 python .\down.py
 
+## 생성기
+C:\tools\xpack-windows-build-tools-4.2.1-2\bin\make.exe
+
+## 컴파일러  
+C:\tools\gcc-arm-none-eabi-9-2020-q2-update-win32\bin\arm-none-eabi-gcc.exe  
+C:\tools\gcc-arm-none-eabi-9-2020-q2-update-win32\bin\arm-none-eabi-g++.exe
+
+C:\tools\mingw32\bin
 
 ## rs2040 RP2-B2  
 Key features:
@@ -37,3 +42,35 @@ Key features:
   - 8 PIO state machines
 Whatever your microcontroller application, from machine learning to motor control, from agriculture to audio, RP2040
 has the performance, feature set, and support to make your product fly.
+
+## Pin 
+| gpio| function  | pcb silk  |   |   |
+|---|---|---|---|---|
+|  17 |  state led  |  X |   |   |
+|  13 | UART0 RX  |  IO13 |   |   |
+|  12 | UART0 TX  | IO12  |   |   |
+|  25 | I2C0 SDA/UART1 RX   | IO25  | 풀업 없음   |   |
+|  24 | I2C0 SCL/UART1 TX  | IO24  | 풀업 없음   |   |
+|  11 | I2C1 SDA | IO11  | pull up  |   |
+|  10 | I2C1 SCL | IO10  | pull up  |   |
+|  29 | SPI1 CSn  | IO29  |   |   |
+|  28 | SPI1 RX  | IO28  |   |   |
+|  27 | SPI1 TX  | IO27  |   |   |
+|  26 | SPI1 SCK  | IO26  |   |   |
+|  21 |   | IO21  | servo  |   |
+|  20 |   | IO20  | end stop  |   |
+|  15 |   | IO15  | enencoder  |   |
+|  14 |   | IO14  | extra  |   |
+|  3 |   | GPIO3  | en | select motor  |
+|  1 |   | GPIO1  | dir  | select motor  |
+|  2 |   | GPIO2  | step  | select motor  |
+|  0 |   | GPIO0  | uart  | select motor  |
+|  22 |   | GPIO22  | diag  | select motor  |
+|  6 |   | GPIO6  | en | gear motor  |
+|  8 |   | GPIO8  | dir  | gear motor  |
+|  7 |   | GPIO7  | step  | gear motor  |
+|  9 |   | GPIO9  | uart  | gear motor  |
+|  23 |   | GPIO23  | diag  | gear motor  |
+|  4 | UART1 TX  | GPIO4  | RXD  | TJA1051 can transceiver 4pin  |
+|  5 | UART1 RX  | GPIO5  | TXD  | TJA1051 can transceiver 1pin  |
+• State LED 
