@@ -33,7 +33,7 @@
     {
       "label": "down Windows",
       "type": "shell",
-      "command": "./tools/windows/rp2040_loader.exe -p com21 -f build/src/rabbit_2axis_can_fw.bin -r",
+      "command": "./tools/windows/rp2040_loader.exe -p com23 -f build/src/rabbit_2axis_can_fw.bin -r",
       "group": {
         "kind": "build",
         "isDefault": true

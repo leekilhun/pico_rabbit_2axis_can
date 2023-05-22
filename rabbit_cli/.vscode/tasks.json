@@ -33,7 +33,7 @@
     {
       "label": "down Windows",
       "type": "shell",
-      "command": "./tools/windows/rp2040_loader.exe -p com19 -f build/src/rp2040_fw.bin -r",
+      "command": "./tools/windows/rp2040_loader.exe -p com23 -f build/src/rabbit_cli.bin -r",
       "group": {
         "kind": "build",
         "isDefault": true

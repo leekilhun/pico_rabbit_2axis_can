@@ -44,33 +44,36 @@ Whatever your microcontroller application, from machine learning to motor contro
 has the performance, feature set, and support to make your product fly.
 
 ## Pin 
-| gpio| function  | pcb silk  |   |   |
-|---|---|---|---|---|
-|  17 |  state led  |  X |   |   |
-|  13 | UART0 RX  |  IO13 |   |   |
-|  12 | UART0 TX  | IO12  |   |   |
-|  25 | I2C0 SDA/UART1 RX   | IO25  | 풀업 없음   |   |
-|  24 | I2C0 SCL/UART1 TX  | IO24  | 풀업 없음   |   |
-|  11 | I2C1 SDA | IO11  | pull up  |   |
-|  10 | I2C1 SCL | IO10  | pull up  |   |
-|  29 | SPI1 CSn  | IO29  |   |   |
-|  28 | SPI1 RX  | IO28  |   |   |
-|  27 | SPI1 TX  | IO27  |   |   |
-|  26 | SPI1 SCK  | IO26  |   |   |
-|  21 |   | IO21  | servo  |   |
-|  20 |   | IO20  | end stop  |   |
-|  15 |   | IO15  | enencoder  |   |
-|  14 |   | IO14  | extra  |   |
-|  3 |   | GPIO3  | en | select motor  |
-|  1 |   | GPIO1  | dir  | select motor  |
-|  2 |   | GPIO2  | step  | select motor  |
-|  0 |   | GPIO0  | uart  | select motor  |
-|  22 |   | GPIO22  | diag  | select motor  |
-|  6 |   | GPIO6  | en | gear motor  |
-|  8 |   | GPIO8  | dir  | gear motor  |
-|  7 |   | GPIO7  | step  | gear motor  |
-|  9 |   | GPIO9  | uart  | gear motor  |
-|  23 |   | GPIO23  | diag  | gear motor  |
-|  4 | UART1 TX  | GPIO4  | RXD  | TJA1051 can transceiver 4pin  |
-|  5 | UART1 RX  | GPIO5  | TXD  | TJA1051 can transceiver 1pin  |
-• State LED 
+| gpio | function          | pcb silk |           |                              |
+| ---- | ----------------- | -------- | --------- | ---------------------------- |
+| 17   | state led         | X        |           |                              |
+| 13   | UART0 RX          | IO13     |           |                              |
+| 12   | UART0 TX          | IO12     |           |                              |
+| 25   | I2C0 SDA/UART1 RX | IO25     | 풀업 없음 |                              |
+| 24   | I2C0 SCL/UART1 TX | IO24     | 풀업 없음 |                              |
+| 11   | I2C1 SDA          | IO11     | pull up   |                              |
+| 10   | I2C1 SCL          | IO10     | pull up   |                              |
+| 29   | SPI1 CSn          | IO29     |           |                              |
+| 28   | SPI1 RX           | IO28     |           |                              |
+| 27   | SPI1 TX           | IO27     |           |                              |
+| 26   | SPI1 SCK          | IO26     |           |                              |
+| 21   |                   | IO21     | servo     |                              |
+| 20   |                   | IO20     | end stop  |                              |
+| 15   |                   | IO15     | enencoder |                              |
+| 14   |                   | IO14     | extra     |                              |
+| 3    |                   | GPIO3    | en        | select motor                 |
+| 1    |                   | GPIO1    | dir       | select motor                 |
+| 2    |                   | GPIO2    | step      | select motor                 |
+| 0    |                   | GPIO0    | uart      | select motor                 |
+| 22   |                   | GPIO22   | diag      | select motor                 |
+| 6    |                   | GPIO6    | en        | gear motor                   |
+| 8    |                   | GPIO8    | dir       | gear motor                   |
+| 7    |                   | GPIO7    | step      | gear motor                   |
+| 9    |                   | GPIO9    | uart      | gear motor                   |
+| 23   |                   | GPIO23   | diag      | gear motor                   |
+| 4    | UART1 TX          | GPIO4    | RXD       | TJA1051 can transceiver 4pin |
+| 5    | UART1 RX          | GPIO5    | TXD       | TJA1051 can transceiver 1pin |
+| 16   | SPI0 RX           | GPIO16   | tmc2209   | 1k 저항을 거쳐 각 모터로 감  |
+| 18   | SPI0 CLK          | GPIO18   | tmc2209   | 1k 저항을 거쳐 각 모터로 감  |
+| 19   | SPI0 TX           | GPIO19   | tmc2209   | 1k 저항을 거쳐 각 모터로 감  |
+•
